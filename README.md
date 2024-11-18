@@ -1,6 +1,20 @@
 # Train and forecast cnn-lstm model on time series data
 
-Clone, train and get forecast on any time series csv file.
+Clone, train and get forecast on any time series csv file. The model is:
+
+```
+TSModel(
+  (conv1d): Conv1d(1, 64, kernel_size=(3,), stride=(1,), padding=same)
+  (lstm): LSTM(64, 64, num_layers=2, batch_first=True)
+  (fcs): Sequential(
+    (0): Linear(in_features=64, out_features=30, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=30, out_features=10, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=10, out_features=1, bias=True)
+  )
+)
+```
 
 
 ## Usage
