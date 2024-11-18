@@ -96,7 +96,7 @@ def main(args):
     plt.plot(predictions, label='Predicted')
     plt.legend()
     plt.title('Time Series Forecasting Results')
-    plt.savefig(f"val_graphs\\{os.path.basename(args.data).split('.csv')[0]}_validation.png")
+    plt.savefig(f"val_graphs/{os.path.basename(args.data).split('.csv')[0]}_validation.png")
     plt.show()
 
     # return predictions, actuals
